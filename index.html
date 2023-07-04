@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de itens</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    form {
+      margin-bottom: 20px;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    button {
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    input[type="text"],
+    input[type="number"] {
+      background-color: #fff;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    li {
+      background-color: #fff;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .item-name {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+    
+    .item-actions {
+      display: flex;
+      align-items: center;
+    }
+    
+    .item-actions button {
+      margin-left: 5px;
+    }
+    
+    p {
+      font-size: 18px;
+      color: #333;
+      margin-top: 20px;
+    }
+    
+    #total {
+      font-weight: bold;
+    }
+    
+    /* Estilos para dispositivos móveis */
+    @media only screen and (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      input[type="text"],
+      input[type="number"],
+      button {
+        padding: 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Adicione itens:</h1>
+  
+  <form>
+    <input type="text" id="item-name" placeholder="Nome do Item">
+    <input type="number" id="item-value" placeholder="Valor">
+    <button type="button" onclick="addItem()">Adicionar</button>
+  </form>
+  
+  <ul id="item-list"></ul>
+  
+  <p>Total: R$ <span id="total">0</span></p>
+  
+  <button type="button" onclick="resetList()">Reiniciar Lista</button>
+  
+  <script src="script.js"></script>
+
+  <footer><strong>By: Jorgin né amor</strong> 🥵</footer>
+</body>
+</html>
